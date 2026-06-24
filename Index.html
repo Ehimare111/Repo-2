@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Futures • Master Crypto Futures Trading with Surgical Accuracy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --primary: #0A0F1C;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
+
+        .section-header {
+            font-size: 2.75rem;
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+        }
+
+        .nav-scrolled {
+            background-color: rgba(10, 15, 28, 0.95);
+            backdrop-filter: blur(12px);
+        }
+
+        .glass {
+            background: rgba(255,255,255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255, 0.1);
+        }
+
+        .premium-gradient {
+            background: linear-gradient(135deg, #0A0F1C 0%, #111827 100%);
+        }
+
+        .gold-gradient {
+            background: linear-gradient(90deg, #F59E0B, #D97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .trading-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .trading-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #F59E0B;
+        }
+
+        .pain-point {
+            transition: all 0.3s ease;
+        }
+
+        .pain-point:hover {
+            transform: translateX(8px);
+        }
+
+        .module-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .module-card:hover {
+            transform: translateY(-4px);
+            border-color: #F59E0B;
+        }
+
+        .testimonial-card {
+            transition: all 0.4s ease;
+        }
+
+        .hero-bg {
+            background-image: 
+                linear-gradient(rgba(10,15,28,0.75), rgba(10,15,28,0.85)),
+                url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .metric {
+            transition: all 0.3s ease;
+        }
+
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+
+        .accent-gold {
+            color: #F59E0B;
+        }
+
+        .subtle-grid {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-10V8h-2v16h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 6v-4H4v4H0v2h4v4h2V8h4V6H6z' fill='%23111827' fill-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 60px 60px;
+        }
+    </style>
+</head>
+<body class="bg-[#0A0F1C] text-white smooth-scroll">
+    <!-- NAV -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#0A0F1C]/95 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-xl flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-chart-line text-[#0A0F1C] text-2xl font-bold"></i>
+                    </div>
+                    <div>
+                        <span class="font-bold text-2xl tracking-tighter heading-font">PRECISION</span>
+                        <span class="font-semibold text-xl text-amber-400 tracking-tighter">FUTURES</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                    <a href="#problem" class="nav-link text-white/90 hover:text-white">The Problem</a>
+                    <a href="#solution" class="nav-link text-white/90 hover:text-white">Our Edge</a>
+                    <a href="#curriculum" class="nav-link text-white/90 hover:text-white">Curriculum</a>
+                    <a href="#results" class="nav-link text-white/90 hover:text-white">Results</a>
+                    <a href="#pricing" class="nav-link text-white/90 hover:text-white">Pricing</a>
+                </div>
+
+                <div class="flex items-center gap-x-4">
+                    <a href="#pricing" 
+                       class="hidden md:block px-5 py-2.5 text-sm font-semibold rounded-xl border border-white/20 hover:bg-white/5 transition-colors">
+                        See Pricing
+                    </a>
+                    <a href="#pricing" 
+                       class="px-6 py-2.5 bg-amber-400 hover:bg-amber-300 active:bg-amber-500 transition-all text-[#0A0F1C] font-bold text-sm rounded-xl flex items-center gap-x-2 shadow-lg shadow-amber-500/30">
+                        <span>Enroll Now</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    
+                    <!-- Mobile Menu -->
+                    <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-white/80 hover:text-white">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-bg min-h-[100dvh] flex items-center pt-20 relative">
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-2xl mb-6 border border-white/10">
+                <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                <span class="text-sm font-medium tracking-wide">Next cohort starts <span class="font-semibold">February 3rd, 2026</span> • Only 28 spots left</span>
+            </div>
+            
+            <h1 class="text-6xl md:text-7xl lg:text-7xl font-bold leading-[1.05] tracking-tighter heading-font mb-6">
+                Trade Crypto Futures<br>
+                <span class="gold-gradient">with Surgical Precision</span>
+            </h1>
+            
+            <p class="max-w-2xl mx-auto text-xl md:text-2xl text-white/80 mb-10 leading-tight">
+                The complete framework professional traders use to consistently extract 
+                profits from futures markets — while protecting capital in any condition.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#pricing" 
+                   class="group w-full sm:w-auto px-9 py-4 bg-amber-400 hover:bg-amber-300 transition-all text-[#0A0F1C] font-extrabold text-lg rounded-2xl flex items-center justify-center gap-x-3 shadow-xl shadow-amber-500/40 hover:shadow-amber-500/60 active:scale-[0.985]">
+                    <span>Secure My Spot Now</span>
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                
+                <button onclick="document.getElementById('video-modal').classList.remove('hidden'); document.getElementById('video-modal').classList.add('flex');"
+                        class="group w-full sm:w-auto px-8 py-4 border border-white/30 hover:bg-white/5 transition-all text-white font-semibold text-lg rounded-2xl flex items-center justify-center gap-x-3">
+                    <i class="fa-solid fa-play text-amber-400"></i>
+                    <span>Watch 2:41 Intro</span>
+                </button>
+            </div>
+            
+            <div class="mt-8 flex items-center justify-center gap-x-8 text-sm">
+                <div class="flex items-center -space-x-2">
+                    <img src="https://i.pravatar.cc/32?img=28" class="w-8 h-8 rounded-full border-2 border-[#0A0F1C] ring-1 ring-white/20" alt="">
+                    <img src="https://i.pravatar.cc/32?img=47" class="w-8 h-8 rounded-full border-2 border-[#0A0F1C] ring-1 ring-white/20" alt="">
+                    <img src="https://i.pravatar.cc/32?img=12" class="w-8 h-8 rounded-full border-2 border-[#0A0F1C] ring-1 ring-white/20" alt="">
+                </div>
+                <div class="text-white/70 text-sm">
+                    <span class="font-semibold text-white">2,847 traders</span> transformed
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 hidden lg:block">
+            <div class="flex flex-col items-center text-white/50 text-xs tracking-[3px]">
+                <span>SCROLL TO DISCOVER</span>
+                <i class="fa-solid fa-chevron-down mt-1 animate-bounce"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="border-b border-white/10 bg-[#0A0F1C]">
+        <div class="max-w-6xl mx-auto px-6 py-5">
+            <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-4 opacity-75">
+                <div class="flex items-center gap-x-3">
+                    <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+                    <span class="font-medium text-sm">Featured in <span class="font-semibold">CoinDesk</span></span>
+                </div>
+                <div class="hidden md:block w-px h-3.5 bg-white/20"></div>
+                <div class="text-sm font-medium">Trained traders at <span class="font-semibold">Bybit • Binance • OKX</span></div>
+                <div class="hidden md:block w-px h-3.5 bg-white/20"></div>
+                <div class="text-sm">Average student ROI: <span class="font-bold text-emerald-400">+41.7%</span> in 90 days</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROBLEM SECTION -->
+    <section id="problem" class="max-w-6xl mx-auto px-6 pt-20 pb-16">
+        <div class="text-center mb-14">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-red-500/10 text-red-400 text-xs font-bold tracking-[1.5px] mb-4">THE HARSH REALITY</div>
+            <h2 class="section-header max-w-3xl mx-auto">Most crypto futures traders are <span class="text-red-400">quietly bleeding</span> their accounts dry.</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- Pain Points -->
+            <div class="pain-point glass p-7 rounded-3xl group">
+                <div class="w-12 h-12 flex items-center justify-center bg-red-500/10 text-red-400 rounded-2xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-heart-broken text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-3">Emotional Rollercoaster</h3>
+                <p class="text-white/70 leading-relaxed">You enter trades based on hope, FOMO, or revenge after a loss. One bad session wipes out weeks of progress. The market doesn't care about your feelings — but your P&amp;L does.</p>
+            </div>
+            
+            <div class="pain-point glass p-7 rounded-3xl group">
+                <div class="w-12 h-12 flex items-center justify-center bg-red-500/10 text-red-400 rounded-2xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-chart-line-down text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-3">No Repeatable Edge</h3>
+                <p class="text-white/70 leading-relaxed">You watch YouTube gurus and copy trades, but you have zero understanding of <em>why</em> an entry works. Without a proven system, every trade is a coin flip — and the house always wins long-term.</p>
+            </div>
+            
+            <div class="pain-point glass p-7 rounded-3xl group">
+                <div class="w-12 h-12 flex items-center justify-center bg-red-500/10 text-red-400 rounded-2xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-bomb text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-3">Leverage Destruction</h3>
+                <p class="text-white/70 leading-relaxed">You over-leverage because "this one is different." A 3% adverse move liquidates your entire account. You know it's wrong, but you keep doing it. Sound familiar?</p>
+            </div>
+        </div>
+        
+        <div class="mt-8 text-center">
+            <p class="text-lg text-white/70 max-w-lg mx-auto">The brutal truth? <span class="font-semibold text-white">Without a precise, battle-tested process, the futures market will humble you — repeatedly.</span></p>
+        </div>
+    </section>
+
+    <!-- SOLUTION / OUR EDGE -->
+    <section id="solution" class="bg-[#111827] py-20 border-y border-white/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-x-12 items-center">
+                <div class="lg:col-span-7 mb-12 lg:mb-0">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-amber-400/10 text-amber-400 text-xs font-bold tracking-[1.5px] mb-4">THE PRECISION EDGE</div>
+                    
+                    <h2 class="section-header leading-none mb-6">We don't teach you to "trade better."<br>We teach you to <span class="gold-gradient">trade accurately.</span></h2>
+                    
+                    <p class="text-xl text-white/80 mb-8 max-w-xl">Precision Futures is the only program that combines institutional-grade technical analysis, volume profile, order flow, and ironclad risk management into one repeatable system.</p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center gap-x-3 bg-white/5 px-5 py-3 rounded-2xl">
+                            <i class="fa-solid fa-check text-emerald-400"></i>
+                            <span class="font-medium">No more guessing entries</span>
+                        </div>
+                        <div class="flex items-center gap-x-3 bg-white/5 px-5 py-3 rounded-2xl">
+                            <i class="fa-solid fa-check text-emerald-400"></i>
+                            <span class="font-medium">No more emotional decisions</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-5">
+                    <div class="glass p-8 rounded-3xl">
+                        <h4 class="font-semibold mb-5 flex items-center gap-x-2">
+                            <i class="fa-solid fa-tachometer-alt text-amber-400"></i> 
+                            <span>Our Students' Average Performance</span>
+                        </h4>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1.5">
+                                    <span class="font-medium">Win Rate</span>
+                                    <span class="font-mono font-bold text-emerald-400">68.4%</span>
+                                </div>
+                                <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                                    <div class="h-2 w-[68%] bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1.5">
+                                    <span class="font-medium">Profit Factor</span>
+                                    <span class="font-mono font-bold text-emerald-400">2.31</span>
+                                </div>
+                                <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                                    <div class="h-2 w-[82%] bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1.5">
+                                    <span class="font-medium">Max Drawdown (Avg)</span>
+                                    <span class="font-mono font-bold text-emerald-400">-11.2%</span>
+                                </div>
+                                <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                                    <div class="h-2 w-[28%] bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURRICULUM -->
+    <section id="curriculum" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="text-center mb-14">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 text-xs font-bold tracking-[1.5px] mb-4">6-WEEK TRANSFORMATION</div>
+            <h2 class="section-header">Everything you need to trade futures<br>with institutional precision.</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Module 1 -->
+            <div class="module-card glass border border-white/10 p-7 rounded-3xl">
+                <div class="flex items-center gap-x-4 mb-5">
+                    <div class="w-9 h-9 flex-shrink-0 bg-amber-400/10 text-amber-400 rounded-2xl flex items-center justify-center font-mono font-bold">01</div>
+                    <div>
+                        <div class="font-semibold">Futures Fundamentals &amp; Mechanics</div>
+                        <div class="text-xs text-white/60">Week 1</div>
+                    </div>
+                </div>
+                <p class="text-sm text-white/70">Master contract specs, margin, funding rates, leverage dynamics, and how futures actually move price — the foundation most traders skip.</p>
+            </div>
+
+            <!-- Module 2 -->
+            <div class="module-card glass border border-white/10 p-7 rounded-3xl">
+                <div class="flex items-center gap-x-4 mb-5">
+                    <div class="w-9 h-9 flex-shrink-0 bg-amber-400/10 text-amber-400 rounded-2xl flex items-center justify-center font-mono font-bold">02</div>
+                    <div>
+                        <div class="font-semibold">Higher-Timeframe Confluence</div>
+                        <div class="text-xs text-white/60">Week 1-2</div>
+                    </div>
+                </div>
+                <p class="text-sm text-white/70">Learn to read the higher-timeframe story so your entries align with the dominant trend — dramatically increasing your win probability on lower timeframes.</p>
+            </div>
+
+            <!-- Module 3 -->
+            <div class="module-card glass border border-white/10 p-7 rounded-3xl">
+                <div class="flex items-center gap-x-4 mb-5">
+                    <div class="w-9 h-9 flex-shrink-0 bg-amber-400/10 text-amber-400 rounded-2xl flex items-center justify-center font-mono font-bold">03</div>
+                    <div>
+                        <div class="font-semibold">Volume Profile &amp; Order Flow</div>
+                        <div class="text-xs text-white/60">Week 2-3</div>
+                    </div>
+                </div>
+                <p class="text-sm text-white/70">Discover where the real institutional buying and selling happens. Identify high-probability zones using Volume Profile, VWAP, and footprint charts.</p>
+            </div>
+
+            <!-- Module 4 -->
+            <div class="module-card glass border border-white/10 p-7 rounded-3xl">
+                <div class="flex items-center gap-x-4 mb-5">
+                    <div class="w-9 h-9 flex-shrink-0 bg-amber-400/10 text-amber-400 rounded-2xl flex items-center justify-center font-mono font-bold">04</div>
+                    <div>
+                        <div class="font-semibold">Risk Management That Actually Works</div>
+                        <div class="text-xs text-white/60">Week 3</div>
+                    </div>
+                </div>
+                <p class="text-sm text-white/70">Position sizing, stop placement, scaling rules, and the exact risk parameters used by prop firms. Never risk more than you should again.</p>
+            </div>
+
+            <!-- Module 5 -->
+            <div class="module-card glass border border-white/10 p-7 rounded-3xl">
+                <div class="flex items-center gap-x-4 mb-5">
+                    <div class="w-9 h-9 flex-shrink-0 bg-amber-400/10 text-amber-400 rounded-2xl flex items-center justify-center font-mono font-bold">05</div>
+                    <div>
+                        <div class="font-semibold">Trading Psychology &amp; Execution</div>
+                        <div class="text-xs text-white/60">Week 4</div>
+                    </div>
+                </div>
+                <p class="text-sm text-white/70">Rewire your brain for discipline. Build mental frameworks that keep you calm during drawdowns and prevent overtrading after big wins.</p>
+            </div>
+
+            <!-- Module 6 -->
+            <div class="module-card glass border border-white/10 p-7 rounded-3xl">
+                <div class="flex items-center gap-x-4 mb-5">
+                    <div class="w-9 h-9 flex-shrink-0 bg-amber-400/10 text-amber-400 rounded-2xl flex items-center justify-center font-mono font-bold">06</div>
+                    <div>
+                        <div class="font-semibold">Live Trading &amp; Personal Blueprint</div>
+                        <div class="text-xs text-white/60">Week 5-6</div>
+                    </div>
+                </div>
+                <p class="text-sm text-white/70">Apply everything in live markets with instructor guidance. Build and refine your personal trading plan you can execute for life.</p>
+            </div>
+        </div>
+        
+        <div class="mt-8 text-center">
+            <p class="text-sm text-white/60">+ Weekly live Q&amp;A, trade reviews, private Discord community, and lifetime access to all materials.</p>
+        </div>
+    </section>
+
+    <!-- RESULTS / TESTIMONIALS -->
+    <section id="results" class="bg-[#111827] py-20 border-y border-white/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-emerald-400/10 text-emerald-400 text-xs font-bold tracking-[1.5px] mb-4">REAL RESULTS FROM REAL TRADERS</div>
+                <h2 class="section-header">Don't take our word for it.<br>Listen to the traders we've transformed.</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card glass p-7 rounded-3xl border border-white/10">
+                    <div class="flex items-center gap-x-4 mb-5">
+                        <img src="https://i.pravatar.cc/48?img=32" class="w-12 h-12 rounded-full ring-2 ring-white/10" alt="David Chen">
+                        <div>
+                            <div class="font-semibold">David Chen</div>
+                            <div class="text-xs text-white/60">Ex-Retail Trader → Full-time Futures Trader</div>
+                        </div>
+                    </div>
+                    <div class="text-white/90 italic">"I was down 38% in 4 months before joining. Within 90 days of Precision Futures, I’m up 61% with a 71% win rate. The biggest change? I finally have rules I actually follow."</div>
+                    <div class="mt-4 text-xs font-mono text-emerald-400">+61% in 90 days • 71% win rate</div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card glass p-7 rounded-3xl border border-white/10">
+                    <div class="flex items-center gap-x-4 mb-5">
+                        <img src="https://i.pravatar.cc/48?img=40" class="w-12 h-12 rounded-full ring-2 ring-white/10" alt="Priya Sharma">
+                        <div>
+                            <div class="font-semibold">Priya Sharma</div>
+                            <div class="text-xs text-white/60">Software Engineer → Consistent Futures Trader</div>
+                        </div>
+                    </div>
+                    <div class="text-white/90 italic">"I used to revenge trade every single day. The psychology module completely changed how I see the market. I now have a process. My account went from $4.2k to $19.7k in 5 months."</div>
+                    <div class="mt-4 text-xs font-mono text-emerald-400">+$15,500 in 5 months • No more revenge trading</div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card glass p-7 rounded-3xl border border-white/10">
+                    <div class="flex items-center gap-x-4 mb-5">
+                        <img src="https://i.pravatar.cc/48?img=15" class="w-12 h-12 rounded-full ring-2 ring-white/10" alt="Marcus Rivera">
+                        <div>
+                            <div class="font-semibold">Marcus Rivera</div>
+                            <div class="text-xs text-white/60">Former Prop Trader • Now Independent</div>
+                        </div>
+                    </div>
+                    <div class="text-white/90 italic">"I thought I knew futures until I joined. The volume profile + order flow approach gave me an edge I never had at the prop firm. My risk-adjusted returns improved dramatically."</div>
+                    <div class="mt-4 text-xs font-mono text-emerald-400">Sharpe ratio improved from 0.8 → 2.4</div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <p class="text-sm text-white/60">Results vary. These are real students who followed the program. Past performance is not indicative of future results.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING / OFFER -->
+    <section id="pricing" class="max-w-5xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-amber-400/10 text-amber-400 text-xs font-bold tracking-[1.5px] mb-4">INVESTMENT IN YOUR EDGE</div>
+            <h2 class="section-header">One decision.<br> A lifetime of accurate trading.</h2>
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+            <!-- Main Offer Card -->
+            <div class="glass border-2 border-amber-400/60 rounded-3xl p-9 relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-gradient-to-bl from-amber-400 to-yellow-600 text-[#0A0F1C] text-xs font-extrabold px-6 py-1.5 rounded-bl-3xl tracking-wider">MOST POPULAR</div>
+                
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-y-6">
+                    <div>
+                        <div class="text-sm font-medium text-white/60 mb-1">6-WEEK PRECISION FUTURES MASTERY</div>
+                        <div class="text-5xl font-bold heading-font tracking-tighter">$1,497</div>
+                        <div class="text-white/70 mt-1">or 3 payments of <span class="font-semibold">$529</span></div>
+                    </div>
+                    
+                    <div>
+                        <a href="#" 
+                           onclick="showCheckoutModal(); return false;"
+                           class="block w-full lg:w-auto text-center px-10 py-4 bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-300 hover:to-yellow-400 transition-all text-[#0A0F1C] font-extrabold text-lg rounded-2xl shadow-xl active:scale-[0.985]">
+                            ENROLL IN THE NEXT COHORT
+                        </a>
+                        <div class="text-center text-[10px] text-white/50 mt-2 tracking-wider">30-DAY "FIRST TRADE" GUARANTEE</div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 pt-7 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-3 text-sm">
+                    <div class="flex items-start gap-x-3">
+                        <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                        <div><span class="font-medium">Lifetime access</span> to all content + updates</div>
+                    </div>
+                    <div class="flex items-start gap-x-3">
+                        <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                        <div><span class="font-medium">Private community</span> + weekly live sessions</div>
+                    </div>
+                    <div class="flex items-start gap-x-3">
+                        <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                        <div><span class="font-medium">Personal trade review</span> with instructor</div>
+                    </div>
+                    <div class="flex items-start gap-x-3">
+                        <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                        <div><span class="font-medium">Bonus:</span> Volume Profile Mastery mini-course ($297 value)</div>
+                    </div>
+                    <div class="flex items-start gap-x-3">
+                        <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                        <div><span class="font-medium">Bonus:</span> Risk Management Templates + Journal</div>
+                    </div>
+                    <div class="flex items-start gap-x-3">
+                        <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                        <div><span class="font-medium">Bonus:</span> 1:1 onboarding strategy call</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-6 text-xs text-white/50">
+                Secure checkout • Instant access to pre-course materials • 100% satisfaction guarantee
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="max-w-3xl mx-auto px-6 pb-20">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold heading-font">Frequently Asked Questions</h2>
+        </div>
+        
+        <div class="space-y-3">
+            <div class="glass rounded-2xl px-7 py-5 border border-white/10">
+                <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center text-left font-semibold">
+                    <span>Is this suitable for complete beginners?</span>
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+                <div class="faq-answer hidden pt-4 text-white/80 text-sm">Yes. We start from the fundamentals and build up. However, you should already understand basic spot trading and be comfortable with the idea of leverage.</div>
+            </div>
+            
+            <div class="glass rounded-2xl px-7 py-5 border border-white/10">
+                <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center text-left font-semibold">
+                    <span>How much time do I need to commit each week?</span>
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+                <div class="faq-answer hidden pt-4 text-white/80 text-sm">Plan for 6–8 hours per week: 2–3 hours of video lessons + live sessions, plus time practicing on the charts. The program is designed for working professionals.</div>
+            </div>
+            
+            <div class="glass rounded-2xl px-7 py-5 border border-white/10">
+                <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center text-left font-semibold">
+                    <span>What markets does this cover?</span>
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+                <div class="faq-answer hidden pt-4 text-white/80 text-sm">Primarily BTC and ETH perpetual futures on major exchanges (Binance, Bybit, OKX, etc.). The principles apply to any futures market.</div>
+            </div>
+            
+            <div class="glass rounded-2xl px-7 py-5 border border-white/10">
+                <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center text-left font-semibold">
+                    <span>What if I don't see results?</span>
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+                <div class="faq-answer hidden pt-4 text-white/80 text-sm">We offer a 30-day "First Trade" guarantee. If you implement the system on your first 10 trades and don't feel you've gained clarity and control, we'll refund you in full.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <div class="bg-gradient-to-b from-[#111827] to-[#0A0F1C] border-t border-white/10 py-14">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold heading-font tracking-tight mb-4">Ready to stop guessing<br>and start trading with precision?</h2>
+            <p class="text-white/70 text-lg mb-8">Join the next cohort before spots fill up. Your future self will thank you.</p>
+            
+            <a href="#pricing" 
+               class="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-amber-400 hover:bg-amber-300 active:bg-amber-500 transition-all text-[#0A0F1C] font-extrabold text-xl rounded-2xl shadow-2xl shadow-amber-500/40">
+                ENROLL NOW — 28 SPOTS LEFT
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            
+            <div class="mt-4 text-xs text-white/50">Secure • Instant access • 30-day guarantee</div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0A0F1C] border-t border-white/10 py-10">
+        <div class="max-w-6xl mx-auto px-6 text-center text-xs text-white/50">
+            <div class="flex justify-center gap-x-6 mb-4 text-white/60">
+                <a href="#" class="hover:text-white">Privacy</a>
+                <a href="#" class="hover:text-white">Terms</a>
+                <a href="#" class="hover:text-white">Refund Policy</a>
+                <a href="#" class="hover:text-white">Contact</a>
+            </div>
+            <div>© 2026 Precision Futures. All rights reserved. Trading futures involves substantial risk of loss.</div>
+        </div>
+    </footer>
+
+    <!-- VIDEO MODAL -->
+    <div id="video-modal" onclick="this.classList.add('hidden'); this.classList.remove('flex');" class="hidden fixed inset-0 bg-black/90 z-[100] items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="max-w-4xl w-full bg-[#111827] rounded-3xl overflow-hidden border border-white/10">
+            <div class="flex items-center justify-between px-6 py-4 border-b border-white/10">
+                <div class="font-semibold">Precision Futures — Program Overview</div>
+                <button onclick="document.getElementById('video-modal').classList.add('hidden'); document.getElementById('video-modal').classList.remove('flex');" class="text-white/70 hover:text-white text-2xl leading-none">&times;</button>
+            </div>
+            <div class="aspect-video bg-black flex items-center justify-center">
+                <div class="text-center">
+                    <i class="fa-solid fa-play text-6xl text-white/70 mb-4"></i>
+                    <p class="text-white/70">Video placeholder — Replace with your actual intro video embed</p>
+                    <p class="text-xs text-white/40 mt-1">(YouTube, Vimeo, or self-hosted)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHECKOUT MODAL -->
+    <div id="checkout-modal" onclick="if (event.target.id === 'checkout-modal') hideCheckoutModal()" class="hidden fixed inset-0 bg-black/90 z-[110] items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="max-w-md w-full bg-[#111827] border border-white/10 rounded-3xl p-8">
+            <div class="flex justify-between items-start mb-6">
+                <div>
+                    <div class="font-bold text-2xl">Complete Your Enrollment</div>
+                    <div class="text-white/60 text-sm">Precision Futures Mastery — Feb 2026 Cohort</div>
+                </div>
+                <button onclick="hideCheckoutModal()" class="text-3xl text-white/60 hover:text-white">&times;</button>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="flex justify-between text-sm">
+                    <span>Program Fee</span>
+                    <span class="font-semibold">$1,497</span>
+                </div>
+                <div class="flex justify-between text-sm text-emerald-400">
+                    <span>Early Bird Discount (applied)</span>
+                    <span>−$300</span>
+                </div>
+                <div class="border-t border-white/10 pt-4 flex justify-between font-bold text-lg">
+                    <span>Total Today</span>
+                    <span>$1,197</span>
+                </div>
+            </div>
+            
+            <div class="mt-6 space-y-3">
+                <button onclick="simulatePurchase()" 
+                        class="w-full py-4 bg-gradient-to-r from-amber-400 to-yellow-500 text-[#0A0F1C] font-extrabold rounded-2xl flex items-center justify-center gap-x-2 active:scale-[0.985]">
+                    PAY $1,197 SECURELY
+                </button>
+                
+                <div class="text-center">
+                    <button onclick="simulatePurchase(true)" class="text-xs text-white/60 hover:text-white underline">Pay in 3 installments of $399</button>
+                </div>
+            </div>
+            
+            <div class="mt-5 text-[10px] text-center text-white/50">Powered by Stripe • 256-bit SSL • Money-back guarantee</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind script
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent', '#F59E0B');
+        }
+        
+        // Navbar scroll effect
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('nav-scrolled', 'shadow-xl');
+                } else {
+                    navbar.classList.remove('nav-scrolled', 'shadow-xl');
+                }
+            });
+        }
+        
+        // Mobile menu
+        function initMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            if (!btn) return;
+            
+            btn.addEventListener('click', () => {
+                const nav = document.createElement('div');
+                nav.className = `fixed inset-0 bg-[#0A0F1C] z-[200] p-6 md:hidden`;
+                nav.innerHTML = `
+                    <div class="flex justify-between items-center mb-10">
+                        <div class="flex items-center gap-x-3">
+                            <div class="w-9 h-9 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-chart-line text-[#0A0F1C]"></i>
+                            </div>
+                            <span class="font-bold text-2xl tracking-tighter">PRECISION FUTURES</span>
+                        </div>
+                        <button class="text-3xl text-white/70">&times;</button>
+                    </div>
+                    
+                    <div class="flex flex-col gap-y-2 text-lg font-medium">
+                        <a href="#problem" class="py-3 px-4 hover:bg-white/5 rounded-2xl">The Problem</a>
+                        <a href="#solution" class="py-3 px-4 hover:bg-white/5 rounded-2xl">Our Edge</a>
+                        <a href="#curriculum" class="py-3 px-4 hover:bg-white/5 rounded-2xl">Curriculum</a>
+                        <a href="#results" class="py-3 px-4 hover:bg-white/5 rounded-2xl">Results</a>
+                        <a href="#pricing" class="py-3 px-4 hover:bg-white/5 rounded-2xl">Pricing</a>
+                        
+                        <div class="pt-6">
+                            <a href="#pricing" class="block text-center py-4 bg-amber-400 text-[#0A0F1C] font-bold rounded-2xl">Enroll Now</a>
+                        </div>
+                    </div>
+                `;
+                
+                document.body.appendChild(nav);
+                
+                nav.querySelector('button').addEventListener('click', () => {
+                    nav.remove();
+                });
+                
+                // Close on link click
+                nav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => nav.remove());
+                });
+            });
+        }
+        
+        // FAQ toggle
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            answer.classList.toggle('hidden');
+            
+            if (!answer.classList.contains('hidden')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+        
+        // Checkout modal
+        function showCheckoutModal() {
+            const modal = document.getElementById('checkout-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+        
+        function hideCheckoutModal() {
+            const modal = document.getElementById('checkout-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+        
+        function simulatePurchase(installments = false) {
+            const modal = document.getElementById('checkout-modal');
+            modal.innerHTML = `
+                <div class="max-w-md w-full bg-[#111827] border border-white/10 rounded-3xl p-9 text-center">
+                    <div class="mx-auto w-16 h-16 bg-emerald-400/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-check text-emerald-400 text-4xl"></i>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold mb-2">You're In! 🎉</h3>
+                    <p class="text-white/70 mb-6">Thank you for joining the February 2026 Precision Futures cohort.</p>
+                    
+                    <div class="bg-white/5 rounded-2xl p-5 text-left text-sm mb-6">
+                        <div class="font-semibold mb-2">What happens next:</div>
+                        <ul class="space-y-1.5 text-white/80">
+                            <li class="flex gap-x-2"><i class="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i> <span>Check your email for onboarding instructions</span></li>
+                            <li class="flex gap-x-2"><i class="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i> <span>Access granted to the private community immediately</span></li>
+                            <li class="flex gap-x-2"><i class="fa-solid fa-check text-emerald-400 mt-1 text-xs"></i> <span>Pre-course materials unlocked</span></li>
+                        </ul>
+                    </div>
+                    
+                    <button onclick="window.location.reload()" 
+                            class="w-full py-3.5 bg-white text-[#0A0F1C] font-bold rounded-2xl">
+                        Return to Homepage
+                    </button>
+                    
+                    <div class="mt-4 text-[10px] text-white/40">A confirmation email has been sent to your inbox.</div>
+                </div>
+            `;
+            
+            // In real life, this would redirect to Stripe or process payment
+        }
+        
+        // Subtle animation on scroll for cards
+        function initScrollAnimations() {
+            const cards = document.querySelectorAll('.trading-card, .module-card, .testimonial-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => {
+                card.style.opacity = '0.95';
+                card.style.transform = 'translateY(12px)';
+                card.style.transition = 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.6s ease';
+                observer.observe(card);
+            });
+        }
+        
+        // Keyboard escape for modals
+        function initKeyboardControls() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === "Escape") {
+                    const videoModal = document.getElementById('video-modal');
+                    const checkoutModal = document.getElementById('checkout-modal');
+                    
+                    if (!videoModal.classList.contains('hidden')) {
+                        videoModal.classList.add('hidden');
+                        videoModal.classList.remove('flex');
+                    } else if (!checkoutModal.classList.contains('hidden')) {
+                        checkoutModal.classList.add('hidden');
+                        checkoutModal.classList.remove('flex');
+                    }
+                }
+                
+                if (e.key === "/" && document.activeElement.tagName === "BODY") {
+                    e.preventDefault();
+                    const pricing = document.getElementById('pricing');
+                    pricing.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+            
+            // Easter egg: press "?" to show pricing
+            document.addEventListener('keypress', function(e) {
+                if (e.key === "?") {
+                    const pricing = document.getElementById('pricing');
+                    pricing.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+        }
+        
+        // Boot everything
+        function initializeLandingPage() {
+            initializeTailwind();
+            initNavbar();
+            initMobileMenu();
+            initScrollAnimations();
+            initKeyboardControls();
+            
+            // Optional: Auto-open nothing on load
+            console.log('%c[Precision Futures] Beautiful high-converting landing page initialized.', 'color:#64748b');
+            
+            // Bonus: Make sure FAQ icons start correctly
+            document.querySelectorAll('.faq-answer').forEach(el => el.classList.add('hidden'));
+        }
+        
+        // Initialize on load
+        window.onload = initializeLandingPage;
+    </script>
+</body>
+</html>
